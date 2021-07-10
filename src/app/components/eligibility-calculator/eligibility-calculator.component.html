@@ -1,0 +1,99 @@
+<div id="calcContainer" class="row">
+  <div class="col-sm-8" id="calculatorPanel">
+    <p id="title">{{ panelTitle }}</p>
+    <div id="monthlyIncome">
+      <label>{{ monthlyIncomeText }}</label>
+      <p id="incomeValue">
+        <i *ngIf="!incomeSliderValue" class="fa fa-rupee">
+          {{ incomeSliderValue }}
+        </i>
+        <span *ngIf="incomeSliderValue">
+          {{
+            incomeSliderValue === 0
+              ? "0"
+              : (incomeSliderValue | currency: "INR":"symbol":"5.0")
+          }}
+        </span>
+      </p>
+      <div class="scale">
+        <div class="slider-container">
+          <input
+            type="range"
+            min="100000"
+            max="300000"
+            value="100000"
+            name="loanSlider"
+            class="slider"
+            draggable="true"
+            (dragstart)="activateSlider($event, 'income')"
+            (drag)="activateSlider($event, 'income')"
+            (dragend)="activateSlider($event, 'income')"
+          />
+        </div>
+        <div class="row">
+          <small class="col-sm-6 small-text"
+            ><i class="fa fa-rupee">1,00,000</i></small
+          >
+          <small class="col-sm-6 small-text"
+            ><i class="fa fa-rupee">3,00,000</i></small
+          >
+        </div>
+      </div>
+    </div>
+    <div id="monthlyExpense">
+      <label>{{ monthlyExpenseText }}</label>
+      <p id="incomeValue">
+        <i *ngIf="!expenseSliderValue" class="fa fa-rupee">
+          {{ expenseSliderValue }}
+        </i>
+        <span *ngIf="expenseSliderValue">
+          {{
+            expenseSliderValue === 0
+              ? "0"
+              : (expenseSliderValue | currency: "INR":"symbol":"0.0")
+          }}
+        </span>
+      </p>
+      <div class="scale">
+        <div class="slider-container">
+          <input
+            type="range"
+            min="100000"
+            max="300000"
+            value="100000"
+            name="loanSlider"
+            class="slider"
+            draggable="true"
+            (dragstart)="activateSlider($event, 'expense')"
+            (drag)="activateSlider($event, 'expense')"
+            (dragend)="activateSlider($event, 'expense')"
+          />
+        </div>
+      </div>
+    </div>
+    <div id="repayment">
+      <label> {{ repaymentLabel }} </label>
+      <select>
+        <option *ngFor="let tenure of repaymentTenureOptions">
+          {{ tenure }} {{ tenure > 1 ? "Months" : "Month" }}
+        </option>
+      </select>
+    </div>
+    <div id="loanToggle">
+      <span>{{ existingLoanText }}</span>
+      <label class="switch">
+        <input
+          type="checkbox"
+          (change)="isExistingLoan($event.target.checked)"
+          checked="loanExists ? 'checked' : ''"
+        />
+        <span class="slider round"></span>
+      </label>
+    </div>
+    <div id="exstingLoanBlock">
+      <p>{{ emiText }}</p>
+      <input type="text" [disabled]="!loanExists" />
+    </div>
+  </div>
+  <div id="" class="col-sm-4">Get Money</div>
+</div>
