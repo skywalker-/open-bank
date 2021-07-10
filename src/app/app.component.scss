@@ -1,0 +1,188 @@
+#homePageContent {
+  width: 1920px;
+  height: auto;
+  background-color: white;
+  #blobs {
+    height: 1209px;
+    #blobSmall {
+      position: absolute;
+      top: 213px;
+      left: -197px;
+      max-width: 571px;
+      max-height: 572px;
+      width: 571px;
+      height: 572px;
+      background: transparent url("../assets/images/blob-small.svg") 0% 0%
+        no-repeat padding-box;
+    }
+    #blobBig {
+      position: absolute;
+      top: -227.9068603515625px;
+      left: 852px;
+      width: 1183px;
+      height: 1192px;
+      max-width: 1183px;
+      max-height: 1192px;
+      background: transparent url("../assets/images/circle.svg") 0% 0% no-repeat
+        padding-box;
+      opacity: 0.5;
+    }
+    #slogan {
+      position: absolute;
+      top: 270px;
+      left: 189px;
+      width: 407px;
+      height: 98px;
+      background: transparent
+        url("../assets/images/We\ make\ it\ Super\ Sim.svg") 0% 0% no-repeat
+        padding-box;
+      opacity: 1;
+    }
+    #sloganBase {
+      position: absolute;
+      top: 376px;
+      left: 192px;
+      width: 236px;
+      height: 8px;
+      background: #000000 0% 0% no-repeat padding-box;
+      border-radius: 13px;
+      opacity: 0.7;
+    }
+    #peopleMeet {
+      position: absolute;
+      top: 466px;
+      left: 136px;
+      width: 652px;
+      height: 365px;
+      background: transparent url("../assets/images/collect_img-video.png") 0%
+        0% no-repeat padding-box;
+      opacity: 1;
+    }
+    #meshLeft {
+      position: absolute;
+      top: 796px;
+      left: 462px;
+      width: 430px;
+      height: 70px;
+      opacity: 0.5;
+    }
+    #meshRight {
+      position: absolute;
+      top: 936px;
+      left: 1458px;
+      width: 430px;
+      height: 70px;
+      opacity: 0.5;
+    }
+    .mesh {
+      div.dot {
+        display: inline-flex;
+        margin-right: 10px;
+        width: 10px;
+        height: 10px;
+        background: #663399 0% 0% no-repeat padding-box;
+        opacity: 0.3;
+        border-radius: 50%;
+        &:nth-child(22n) {
+          margin-right: 0;
+        }
+      }
+    }
+  }
+  #calculator {
+    position: absolute;
+    top: 270px;
+    left: 1100px;
+    width: 688px;
+    height: 675px;
+    opacity: 1;
+  }
+  div#cardsContainer.row {
+    width: 1920px;
+    height: 937px;
+    background: url("../assets/images/sol_wave_bg.svg") 0% 0% no-repeat
+      padding-box;
+    div.col-sm-6 {
+      div.card {
+        position: relative;
+        left: 191px;
+        width: 391px;
+        height: 253px;
+        box-shadow: 0px 0px 30px #2321321f;
+        border: 1px solid #ffffff;
+        border-radius: 20px;
+        opacity: 1;
+        padding: 0 34px;
+        display: inline-flex;
+        top: -130px;
+        &:hover {
+          background-color: #9c6ec9;
+          color: white;
+          border-color: #9c6ec9;
+        }
+        &:nth-child(odd) {
+          margin-right: 48px;
+          margin-bottom: 50px;
+        }
+        &:nth-child(even) {
+          top: 0px;
+        }
+        img {
+          position: relative;
+          width: 90px;
+          height: 90px;
+          top: 34px;
+        }
+        label {
+          position: relative;
+          top: 50px;
+          font-size: 16px;
+          line-height: 16px;
+          font-weight: bold;
+        }
+        span {
+          position: relative;
+          top: 60px;
+          // left: 34px;
+          font-size: 16px;
+          line-height: 17px;
+          opacity: 0.7;
+        }
+      }
+    }
+    div.col-sm-6 {
+      #boostWithOpen {
+        position: absolute;
+        top: 1335px;
+        left: 1158px;
+        width: 490px;
+        height: 98px;
+        background: transparent
+          url("../assets/images/Boost\ your\ business.svg") 0% 0% no-repeat
+          padding-box;
+        opacity: 1;
+      }
+      #boostBase {
+        position: absolute;
+        top: 1470px;
+        left: 1158px;
+        width: 120px;
+        height: 0px;
+        background: transparent url("../assets/images/Line\ 3.svg") 0% 0%
+          no-repeat padding-box;
+        border: 6px solid #707070;
+        border-radius: 13px;
+        opacity: 1;
+      }
+      #termLoan {
+        position: absolute;
+        top: 1530px;
+        left: 1158px;
+        width: 490px;
+        height: 44px;
+        font-size: 20px;
+        opacity: 0.6;
+      }
+    }
+  }
+}
