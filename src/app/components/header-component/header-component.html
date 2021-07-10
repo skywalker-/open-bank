@@ -1,0 +1,14 @@
+<div class="container-fluid">
+  <div class="brand-logo">
+    <div id="openLogo">
+      <img src="../../assets/images/logo.png" />
+    </div>
+  </div>
+  <div class="org-links" *ngIf="headerMenu?.length > 0">
+    <text *ngFor="let menu of headerMenu" class="menu-link">{{menu}}</text>
+    <div class="btns">
+      <button id="loginBtn">Login</button>
+      <button id="getStarted">Get Started</button>
+    </div>
+  </div>
+</div>

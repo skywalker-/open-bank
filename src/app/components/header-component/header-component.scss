@@ -1,0 +1,62 @@
+.container-fluid {
+  width: 1920px;
+  height: auto;
+  .brand-logo {
+    position: relative;
+    display: inline-block;
+    width: 55%;
+    #openLogo {
+      position: absolute;
+      top: 27px;
+      left: 120px;
+      width: 123px;
+      height: 123px;
+    }
+  }
+  .org-links {
+    position: absolute;
+    top: 68px;
+    left: 1030px;
+    width: 45%;
+    height: 34px;
+    display: inline-block;
+    .menu-link {
+      text-align: left;
+      font: normal normal normal 25px Open Sans;
+      letter-spacing: 0px;
+      color: #222222;
+      opacity: 1;
+      cursor: pointer;
+      &:hover {
+        color: #9f62c9;
+      }
+      &:not(:first-child) {
+        margin-left: 50px;
+      }
+    }
+    .btns {
+      display: inline-block;
+      margin-left: 60px;
+      top: 63px;
+      font-family: Montserrat-Medium;
+      #loginBtn {
+        height: 45px;
+        width: 118px;
+        box-shadow: 0px 0px 20px #f8e6e633;
+        border: 2px solid #663399;
+        border-radius: 24px;
+        opacity: 1;
+      }
+      #getStarted {
+        width: 166px;
+        height: 45px;
+        margin-left: 24px;
+        background: transparent linear-gradient(90deg, #9f62c9 0%, #663399 100%)
+          0% 0% no-repeat padding-box;
+        box-shadow: 0px 0px 20px #00000033;
+        border-radius: 24px;
+        opacity: 1;
+      }
+    }
+  }
+}
