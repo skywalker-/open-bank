@@ -15,11 +15,15 @@ export class EligibilityCalculator {
   public repaymentTenureOptions = [1, 3, 6, 9, 12];
   public existingLoanText = 'Do you have any existing loans?';
   public emiText = 'EMI of existing loan (optional)';
+  public existingEMI: number = 0;
   public loanExists = true;
+  public loanAmountText = 'Loan Amount';
+  public calculatedEmiText = 'Your EMI will be';
+  public calculatedEMIAmount: number = 0;
 
   constructor() {}
 
-  public activateSlider(eve: DragEvent, value: string) {
+  public activateSlider(eve: any, value: string) {
     const parentElement = eve.target['parentElement'];
     const currentElement = eve;
     currentElement.target['style'].cursor = 'pointer';
@@ -65,7 +69,7 @@ export class EligibilityCalculator {
         xDiff - currentElement.target['style'].width - 5 + 'px';
     }
   }
-  public isExistingLoan(isChecked) {
-    this.loanExists = isChecked;
+  public isExistingLoan(eve: any) {
+    this.loanExists = eve.target['checked'];
   }
 }

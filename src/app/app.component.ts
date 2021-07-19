@@ -1,5 +1,4 @@
 import { Component } from '@angular/core';
-import * as Constants from '../assets/constants/constants.json';
 import { ResourceService } from './services/resource-service';
 @Component({
   selector: 'app-root',
@@ -14,7 +13,6 @@ export class AppComponent {
     'Get your hands on a term loan that’s crafted for your business';
 
   constructor(private _resource: ResourceService) {
-    // this.cardsData = this._resource._CONSTANTS.cardContent;
-    this.cardsData = Constants.cardContent;
+    this.cardsData = this._resource._CONSTANTS.cardContent;
   }
 }

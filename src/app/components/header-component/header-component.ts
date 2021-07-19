@@ -1,5 +1,6 @@
 import { Component, OnInit } from '@angular/core';
-import * as Constants from '../../../assets/constants/constants.json';
+import { ResourceService } from '../../services/resource-service';
+
 @Component({
   selector: 'open-header',
   templateUrl: 'header-component.html',
@@ -7,8 +8,8 @@ import * as Constants from '../../../assets/constants/constants.json';
 })
 export class HeaderComponent implements OnInit {
   public headerMenu: string[] = [];
-  constructor() {
-    this.headerMenu = Constants.headerLinks;
+  constructor(private _resource: ResourceService) {
+    this.headerMenu = this._resource._CONSTANTS.headerLinks;
   }
   ngOnInit() {}
 }

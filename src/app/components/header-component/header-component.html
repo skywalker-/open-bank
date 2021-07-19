@@ -4,8 +4,8 @@
       <img src="../../assets/images/logo.png" />
     </div>
   </div>
-  <div class="org-links" *ngIf="headerMenu?.length > 0">
-    <text *ngFor="let menu of headerMenu" class="menu-link">{{menu}}</text>
+  <div class="org-links" *ngIf="headerMenu && headerMenu.length > 0">
+    <span *ngFor="let menu of headerMenu" class="menu-link">{{menu}}</span>
     <div class="btns">
       <button id="loginBtn">Login</button>
       <button id="getStarted">Get Started</button>
